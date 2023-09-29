@@ -61,13 +61,17 @@ const Product = props => {
               <TouchableOpacity
                 style={styles.inero}
                 onPress={() => handleRemoveFromCart(item)}>
-                <Text style={styles.outer}>Remove From Cart</Text>
+                <Text className="text-center uppercase text-xs text-slate-950">
+                  Remove From Cart
+                </Text>
               </TouchableOpacity>
             ) : (
               <TouchableOpacity
                 style={styles.inter}
                 onPress={() => handleAddToCart(item)}>
-                <Text style={styles.outer}>Add To Cart</Text>
+                <Text className="text-center uppercase text-xs text-slate-950">
+                  Add To Cart
+                </Text>
               </TouchableOpacity>
             )}
           </View>
@@ -88,7 +92,7 @@ const styles = StyleSheet.create({
     paddingBottom: 4,
   },
   detail: {
-    gap: 10,
+    gap: 12,
     justifyContent: 'center',
     width: '100%',
   },
@@ -102,10 +106,10 @@ const styles = StyleSheet.create({
     borderColor: 'skyblue',
   },
   outer: {
-    textTransform: 'uppercase',
-    textAlign: 'center',
-    color: 'black',
-    fontSize: 12,
+    // textTransform: 'uppercase',
+    // textAlign: 'center',
+    // color: 'black',
+    // fontSize: 12,
   },
   inero: {
     borderWidth: 2,

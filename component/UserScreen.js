@@ -16,7 +16,7 @@ const UserScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Users />
+      <Users user={userList} />
     </View>
   );
 };

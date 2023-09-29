@@ -4,13 +4,19 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import ProductWraps from './component/ProductWraps';
 import UserScreen from './component/UserScreen';
+import OnboardScreen from './component/OnboardScreen';
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="Onboards">
+        <Stack.Screen
+          name="Onboards"
+          component={OnboardScreen}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           options={{headerShown: false}}
           name="Home"
